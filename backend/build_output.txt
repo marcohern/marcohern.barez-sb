@@ -1,0 +1,1 @@
+no hay ningún atributo de manifiesto principal en .mvn\wrapper\maven-wrapper.jar

@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(java -version)",
+      "Bash(mvn -version)",
+      "Bash(cmd /c \"mvnw.cmd package -DskipTests 2>&1\")",
+      "PowerShell(\\(Get-Item \"e:\\\\src\\\\marcohern\\\\marcohern.barez-sb\\\\backend\\\\.mvn\\\\wrapper\\\\maven-wrapper.jar\"\\).Length)",
+      "PowerShell(Set-Location \"e:\\\\src\\\\marcohern\\\\marcohern.barez-sb\\\\backend\"; $proc = Start-Process -FilePath \"cmd.exe\" -ArgumentList \"/c mvnw.cmd package -DskipTests > build_output.txt 2>&1\" -Wait -PassThru; $proc.ExitCode; Get-Content build_output.txt -Tail 60)",
+      "PowerShell(Set-Location \"e:\\\\src\\\\marcohern\\\\marcohern.barez-sb\\\\backend\"; $proc = Start-Process -FilePath \"cmd.exe\" -ArgumentList \"/c `\"e:\\\\src\\\\marcohern\\\\marcohern.barez-sb\\\\backend\\\\mvnw.cmd`\" package -DskipTests > build_output.txt 2>&1\" -WorkingDirectory \"e:\\\\src\\\\marcohern\\\\marcohern.barez-sb\\\\backend\" -Wait -PassThru; $proc.ExitCode; Get-Content build_output.txt -Tail 80)",
+      "Bash(./mvnw spring-boot:run)",
+      "Bash(echo \"PID: $!\")",
+      "Bash(echo \"Started PID: $!\")",
+      "Bash(npm create *)"
+    ]
+  }
+}
