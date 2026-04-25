@@ -3,7 +3,7 @@ package com.marcohern.barez.controller;
 import com.marcohern.barez.dto.request.CreateStaffRequest;
 import com.marcohern.barez.dto.request.UpdateStaffRequest;
 import com.marcohern.barez.dto.response.UserResponse;
-import com.marcohern.barez.service.impl.StaffServiceImpl;
+import com.marcohern.barez.service.StaffService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,9 +17,9 @@ import java.util.List;
 @PreAuthorize("hasRole('MANAGER')")
 public class StaffController {
 
-    private final StaffServiceImpl staffService;
+    private final StaffService staffService;
 
-    public StaffController(StaffServiceImpl staffService) {
+    public StaffController(StaffService staffService) {
         this.staffService = staffService;
     }
 

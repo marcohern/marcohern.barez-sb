@@ -6,12 +6,13 @@ import com.marcohern.barez.dto.request.UpdateProductRequest;
 import com.marcohern.barez.dto.response.ProductResponse;
 import com.marcohern.barez.exception.ApiException;
 import com.marcohern.barez.repository.ProductRepository;
+import com.marcohern.barez.service.ProductService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class ProductServiceImpl {
+public class ProductServiceImpl implements ProductService {
 
     private final ProductRepository productRepository;
 

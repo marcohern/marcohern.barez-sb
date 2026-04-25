@@ -12,6 +12,7 @@ import com.marcohern.barez.repository.OrderRepository;
 import com.marcohern.barez.repository.ShiftAssignmentRepository;
 import com.marcohern.barez.repository.UserRepository;
 import com.marcohern.barez.repository.WorkShiftRepository;
+import com.marcohern.barez.service.ShiftService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -19,7 +20,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
-public class ShiftServiceImpl {
+public class ShiftServiceImpl implements ShiftService {
 
     private final WorkShiftRepository shiftRepository;
     private final ShiftAssignmentRepository assignmentRepository;

@@ -4,7 +4,7 @@ import com.marcohern.barez.domain.entity.User;
 import com.marcohern.barez.dto.request.AddItemRequest;
 import com.marcohern.barez.dto.response.OrderItemResponse;
 import com.marcohern.barez.dto.response.OrderResponse;
-import com.marcohern.barez.service.impl.OrderServiceImpl;
+import com.marcohern.barez.service.OrderService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,9 +16,9 @@ import org.springframework.web.bind.annotation.*;
 @PreAuthorize("hasAnyRole('MANAGER','WAITER')")
 public class OrderController {
 
-    private final OrderServiceImpl orderService;
+    private final OrderService orderService;
 
-    public OrderController(OrderServiceImpl orderService) {
+    public OrderController(OrderService orderService) {
         this.orderService = orderService;
     }
 

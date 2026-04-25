@@ -8,6 +8,8 @@ import com.marcohern.barez.dto.response.ReceiptResponse;
 import com.marcohern.barez.exception.ApiException;
 import com.marcohern.barez.pdf.PdfReceiptService;
 import com.marcohern.barez.repository.*;
+import com.marcohern.barez.service.ShiftService;
+import com.marcohern.barez.service.TableCloseService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -15,14 +17,14 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Service
-public class TableCloseServiceImpl {
+public class TableCloseServiceImpl implements TableCloseService {
 
     private final BarTableRepository tableRepository;
     private final TableAssignmentRepository assignmentRepository;
     private final OrderRepository orderRepository;
     private final ReceiptRepository receiptRepository;
     private final UserRepository userRepository;
-    private final ShiftServiceImpl shiftService;
+    private final ShiftService shiftService;
     private final PdfReceiptService pdfReceiptService;
 
     public TableCloseServiceImpl(BarTableRepository tableRepository,
@@ -30,7 +32,7 @@ public class TableCloseServiceImpl {
                                  OrderRepository orderRepository,
                                  ReceiptRepository receiptRepository,
                                  UserRepository userRepository,
-                                 ShiftServiceImpl shiftService,
+                                 ShiftService shiftService,
                                  PdfReceiptService pdfReceiptService) {
         this.tableRepository = tableRepository;
         this.assignmentRepository = assignmentRepository;

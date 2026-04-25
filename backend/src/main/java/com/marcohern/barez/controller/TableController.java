@@ -2,7 +2,7 @@ package com.marcohern.barez.controller;
 
 import com.marcohern.barez.dto.request.CreateTableRequest;
 import com.marcohern.barez.dto.response.TableResponse;
-import com.marcohern.barez.service.impl.TableServiceImpl;
+import com.marcohern.barez.service.TableService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,9 +15,9 @@ import java.util.List;
 @RequestMapping("/api/tables")
 public class TableController {
 
-    private final TableServiceImpl tableService;
+    private final TableService tableService;
 
-    public TableController(TableServiceImpl tableService) {
+    public TableController(TableService tableService) {
         this.tableService = tableService;
     }
 

@@ -8,11 +8,13 @@ import com.marcohern.barez.dto.response.OrderItemResponse;
 import com.marcohern.barez.dto.response.OrderResponse;
 import com.marcohern.barez.exception.ApiException;
 import com.marcohern.barez.repository.*;
+import com.marcohern.barez.service.OrderService;
+import com.marcohern.barez.service.ShiftService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
-public class OrderServiceImpl {
+public class OrderServiceImpl implements OrderService {
 
     private final OrderRepository orderRepository;
     private final OrderItemRepository itemRepository;
@@ -20,7 +22,7 @@ public class OrderServiceImpl {
     private final UserRepository userRepository;
     private final ProductRepository productRepository;
     private final TableAssignmentRepository assignmentRepository;
-    private final ShiftServiceImpl shiftService;
+    private final ShiftService shiftService;
 
     public OrderServiceImpl(OrderRepository orderRepository,
                             OrderItemRepository itemRepository,
@@ -28,7 +30,7 @@ public class OrderServiceImpl {
                             UserRepository userRepository,
                             ProductRepository productRepository,
                             TableAssignmentRepository assignmentRepository,
-                            ShiftServiceImpl shiftService) {
+                            ShiftService shiftService) {
         this.orderRepository = orderRepository;
         this.itemRepository = itemRepository;
         this.tableRepository = tableRepository;

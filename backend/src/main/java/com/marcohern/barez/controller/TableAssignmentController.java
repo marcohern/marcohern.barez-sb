@@ -4,7 +4,7 @@ import com.marcohern.barez.domain.entity.User;
 import com.marcohern.barez.dto.request.AssignWaiterRequest;
 import com.marcohern.barez.dto.request.MoveTableRequest;
 import com.marcohern.barez.dto.response.TableAssignmentResponse;
-import com.marcohern.barez.service.impl.TableAssignmentServiceImpl;
+import com.marcohern.barez.service.TableAssignmentService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class TableAssignmentController {
 
-    private final TableAssignmentServiceImpl assignmentService;
+    private final TableAssignmentService assignmentService;
 
-    public TableAssignmentController(TableAssignmentServiceImpl assignmentService) {
+    public TableAssignmentController(TableAssignmentService assignmentService) {
         this.assignmentService = assignmentService;
     }
 

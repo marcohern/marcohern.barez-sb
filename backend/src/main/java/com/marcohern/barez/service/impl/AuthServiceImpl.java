@@ -7,10 +7,11 @@ import com.marcohern.barez.dto.response.AuthResponse;
 import com.marcohern.barez.exception.ApiException;
 import com.marcohern.barez.repository.UserRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import com.marcohern.barez.service.AuthService;
 import org.springframework.stereotype.Service;
 
 @Service
-public class AuthServiceImpl {
+public class AuthServiceImpl implements AuthService {
 
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;

@@ -4,7 +4,7 @@ import com.marcohern.barez.domain.entity.User;
 import com.marcohern.barez.dto.request.AssignWaiterRequest;
 import com.marcohern.barez.dto.response.ShiftAssignmentResponse;
 import com.marcohern.barez.dto.response.ShiftResponse;
-import com.marcohern.barez.service.impl.ShiftServiceImpl;
+import com.marcohern.barez.service.ShiftService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,9 +18,9 @@ import java.util.List;
 @RequestMapping("/api/shifts")
 public class ShiftController {
 
-    private final ShiftServiceImpl shiftService;
+    private final ShiftService shiftService;
 
-    public ShiftController(ShiftServiceImpl shiftService) {
+    public ShiftController(ShiftService shiftService) {
         this.shiftService = shiftService;
     }
 

@@ -2,7 +2,7 @@ package com.marcohern.barez.controller;
 
 import com.marcohern.barez.domain.entity.User;
 import com.marcohern.barez.dto.response.ReceiptResponse;
-import com.marcohern.barez.service.impl.TableCloseServiceImpl;
+import com.marcohern.barez.service.TableCloseService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.*;
 @PreAuthorize("hasAnyRole('MANAGER','WAITER')")
 public class CloseTableController {
 
-    private final TableCloseServiceImpl tableCloseService;
+    private final TableCloseService tableCloseService;
 
-    public CloseTableController(TableCloseServiceImpl tableCloseService) {
+    public CloseTableController(TableCloseService tableCloseService) {
         this.tableCloseService = tableCloseService;
     }
 

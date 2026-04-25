@@ -6,13 +6,14 @@ import com.marcohern.barez.dto.request.UpdateStaffRequest;
 import com.marcohern.barez.dto.response.UserResponse;
 import com.marcohern.barez.exception.ApiException;
 import com.marcohern.barez.repository.UserRepository;
+import com.marcohern.barez.service.StaffService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class StaffServiceImpl {
+public class StaffServiceImpl implements StaffService {
 
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;

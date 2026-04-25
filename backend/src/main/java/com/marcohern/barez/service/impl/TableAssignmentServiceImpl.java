@@ -6,23 +6,25 @@ import com.marcohern.barez.domain.enums.TableStatus;
 import com.marcohern.barez.dto.response.TableAssignmentResponse;
 import com.marcohern.barez.exception.ApiException;
 import com.marcohern.barez.repository.*;
+import com.marcohern.barez.service.ShiftService;
+import com.marcohern.barez.service.TableAssignmentService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
-public class TableAssignmentServiceImpl {
+public class TableAssignmentServiceImpl implements TableAssignmentService {
 
     private final TableAssignmentRepository assignmentRepository;
     private final ShiftAssignmentRepository shiftAssignmentRepository;
     private final BarTableRepository tableRepository;
     private final UserRepository userRepository;
-    private final ShiftServiceImpl shiftService;
+    private final ShiftService shiftService;
 
     public TableAssignmentServiceImpl(TableAssignmentRepository assignmentRepository,
                                       ShiftAssignmentRepository shiftAssignmentRepository,
                                       BarTableRepository tableRepository,
                                       UserRepository userRepository,
-                                      ShiftServiceImpl shiftService) {
+                                      ShiftService shiftService) {
         this.assignmentRepository = assignmentRepository;
         this.shiftAssignmentRepository = shiftAssignmentRepository;
         this.tableRepository = tableRepository;

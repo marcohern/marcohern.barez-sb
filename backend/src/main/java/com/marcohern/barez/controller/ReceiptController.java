@@ -1,6 +1,6 @@
 package com.marcohern.barez.controller;
 
-import com.marcohern.barez.service.impl.ReceiptServiceImpl;
+import com.marcohern.barez.service.ReceiptService;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.*;
 @PreAuthorize("hasAnyRole('MANAGER','WAITER')")
 public class ReceiptController {
 
-    private final ReceiptServiceImpl receiptService;
+    private final ReceiptService receiptService;
 
-    public ReceiptController(ReceiptServiceImpl receiptService) {
+    public ReceiptController(ReceiptService receiptService) {
         this.receiptService = receiptService;
     }
 

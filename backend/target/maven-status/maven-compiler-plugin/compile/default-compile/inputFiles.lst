@@ -56,6 +56,7 @@ E:\src\marcohern\marcohern.barez-sb\backend\src\main\java\com\marcohern\barez\re
 E:\src\marcohern\marcohern.barez-sb\backend\src\main\java\com\marcohern\barez\repository\TableAssignmentRepository.java
 E:\src\marcohern\marcohern.barez-sb\backend\src\main\java\com\marcohern\barez\repository\UserRepository.java
 E:\src\marcohern\marcohern.barez-sb\backend\src\main\java\com\marcohern\barez\repository\WorkShiftRepository.java
+E:\src\marcohern\marcohern.barez-sb\backend\src\main\java\com\marcohern\barez\service\AuthService.java
 E:\src\marcohern\marcohern.barez-sb\backend\src\main\java\com\marcohern\barez\service\impl\AuthServiceImpl.java
 E:\src\marcohern\marcohern.barez-sb\backend\src\main\java\com\marcohern\barez\service\impl\OrderServiceImpl.java
 E:\src\marcohern\marcohern.barez-sb\backend\src\main\java\com\marcohern\barez\service\impl\ProductServiceImpl.java
@@ -65,3 +66,11 @@ E:\src\marcohern\marcohern.barez-sb\backend\src\main\java\com\marcohern\barez\se
 E:\src\marcohern\marcohern.barez-sb\backend\src\main\java\com\marcohern\barez\service\impl\TableAssignmentServiceImpl.java
 E:\src\marcohern\marcohern.barez-sb\backend\src\main\java\com\marcohern\barez\service\impl\TableCloseServiceImpl.java
 E:\src\marcohern\marcohern.barez-sb\backend\src\main\java\com\marcohern\barez\service\impl\TableServiceImpl.java
+E:\src\marcohern\marcohern.barez-sb\backend\src\main\java\com\marcohern\barez\service\OrderService.java
+E:\src\marcohern\marcohern.barez-sb\backend\src\main\java\com\marcohern\barez\service\ProductService.java
+E:\src\marcohern\marcohern.barez-sb\backend\src\main\java\com\marcohern\barez\service\ReceiptService.java
+E:\src\marcohern\marcohern.barez-sb\backend\src\main\java\com\marcohern\barez\service\ShiftService.java
+E:\src\marcohern\marcohern.barez-sb\backend\src\main\java\com\marcohern\barez\service\StaffService.java
+E:\src\marcohern\marcohern.barez-sb\backend\src\main\java\com\marcohern\barez\service\TableAssignmentService.java
+E:\src\marcohern\marcohern.barez-sb\backend\src\main\java\com\marcohern\barez\service\TableCloseService.java
+E:\src\marcohern\marcohern.barez-sb\backend\src\main\java\com\marcohern\barez\service\TableService.java

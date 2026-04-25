@@ -5,12 +5,13 @@ import com.marcohern.barez.dto.request.CreateTableRequest;
 import com.marcohern.barez.dto.response.TableResponse;
 import com.marcohern.barez.exception.ApiException;
 import com.marcohern.barez.repository.BarTableRepository;
+import com.marcohern.barez.service.TableService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class TableServiceImpl {
+public class TableServiceImpl implements TableService {
 
     private final BarTableRepository tableRepository;
 

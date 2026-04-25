@@ -4,6 +4,7 @@ import com.marcohern.barez.domain.entity.Receipt;
 import com.marcohern.barez.dto.response.ReceiptResponse;
 import com.marcohern.barez.exception.ApiException;
 import com.marcohern.barez.repository.ReceiptRepository;
+import com.marcohern.barez.service.ReceiptService;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
@@ -11,7 +12,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 
 @Service
-public class ReceiptServiceImpl {
+public class ReceiptServiceImpl implements ReceiptService {
 
     private final ReceiptRepository receiptRepository;
 
