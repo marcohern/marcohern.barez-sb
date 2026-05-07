@@ -88,6 +88,13 @@
             <artifactId>flyway-sqlserver</artifactId>
         </dependency>
 
+        <!-- SQL Server JDBC (EZCLINICME read-only datasource) -->
+        <dependency>
+            <groupId>com.microsoft.sqlserver</groupId>
+            <artifactId>mssql-jdbc</artifactId>
+            <version>12.6.3.jre11</version>
+        </dependency>
+
 
         <!-- Test -->
         <dependency>
